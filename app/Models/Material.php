@@ -12,6 +12,7 @@ class Material extends Model
     protected $primaryKey = 'codigo';
     public $incrementing = true;
     protected $keyType = 'int';
+    protected $table = 'Material';
 
     protected $fillable = [
         'unidadMedida',

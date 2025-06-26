@@ -12,6 +12,7 @@ class Categoria extends Model
     protected $primaryKey = 'idCategoria';
     public $incrementing = true;
     protected $keyType = 'int';
+    protected $table = 'Categoria';
 
     protected $fillable = [
         'nombre',

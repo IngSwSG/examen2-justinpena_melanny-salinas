@@ -24,4 +24,10 @@ class MaterialController extends Controller
             'material' => $material
         ], 201);
     }
+
+    public function create()
+    {
+        $categorias = \App\Models\Categoria::all();
+        return view('materials.create', compact('categorias'));
+    }
 } 
