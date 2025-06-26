@@ -15,11 +15,18 @@ class Presupuesto extends Model
 
     protected $fillable = [
         'nombrePresupuesto',
+        'idUnidad',
     ];
 
     // Relación: Un presupuesto tiene muchos MaterialUnidad
     public function materialesUnidades()
     {
         return $this->hasMany(MaterialUnidad::class, 'codigoPresupuesto', 'codigoPresupuesto');
+    }
+
+    // Relación: Un presupuesto pertenece a una unidad
+    public function unidad()
+    {
+        return $this->belongsTo(Unidad::class, 'idUnidad', 'idUnidad');
     }
 } 
